@@ -61,6 +61,10 @@ for n, S in [(10, 2000), (100, 2000), (1000, 800), (10000, 200)]:
     summary[n] = dict(p_both=both/S, p_undec=undec/S, median=med, p90=p90, kstar=float(kstar))
     print(f"{n:>7} {S:>8} {both/S:>13.3f} {undec/S:>15.3f} {med:>14.3e} {p90:>12.3e} {float(kstar):>11.3e}")
 
+import json, os
+os.makedirs(__file__.rsplit("/", 2)[0] + "/results", exist_ok=True)
+json.dump(summary, open(__file__.rsplit("/", 2)[0] + "/results/e3.json", "w"), indent=1)
+
 print("\n=== interpretation ===")
 print("A column of positive uniforms has kappa = 1 EXACTLY. kappa explodes only when +MAX and -MAX")
 print("co-occur and cancel. P(+-MAX) ~ 1/600 each, so co-occurrence -- and undecidability -- grows with n.")
