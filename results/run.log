@@ -1,0 +1,28 @@
+
+=== A1: testability boundary kappa* = 1/gamma_n  (beyond it, NO oracle can decide) ===
+  n=  10000: kappa*(plain)=9.007e+11   kappa*(compensated)=4.504e+15
+  n= 100000: kappa*(plain)=9.007e+10   kappa*(compensated)=4.504e+15
+
+=== A2: epsilon crossover kappa_eps = eps/gamma_n (below: too LAX/FN; above: too STRICT/FP) ===
+  n=  10000  kappa_eps_plain[1e-9]        = 9.007e+02
+  n=  10000  kappa_eps_plain[duckdb_1pct] = 9.007e+09
+  n= 100000  kappa_eps_plain[1e-9]        = 9.007e+01
+  n= 100000  kappa_eps_plain[duckdb_1pct] = 9.007e+08
+
+=== classification map (n=10,000) ===
+     kappa | sqlite/kbn             | duckdb/plain           | duckdb/fsum            | postgres/plain         | mysql/plain            | clickhouse/plain       | clickhouse/sumKahan   
+  1.00e+00 | bounded     3.3e-17    | bounded     5.3e-15    | bounded     3.3e-17    | bounded     5.3e-15    | bounded     5.3e-15    | bounded     2.1e-16    | bounded     3.3e-17   
+  1.00e+02 | bounded     4.5e-18    | bounded     4.1e-14    | bounded     4.6e-15    | bounded     4.1e-14    | bounded     4.1e-14    | bounded     4.6e-15    | bounded     2.9e-15   
+  1.00e+04 | bounded     5.6e-17    | bounded     1.5e-11    | bounded     3.4e-13    | bounded     1.5e-11    | bounded     1.5e-11    | bounded     5.8e-13    | bounded     4.6e-13   
+  1.00e+06 | exact       0.0e+00    | bounded     1.6e-09    | bounded     1.8e-11    | bounded     1.6e-09    | bounded     1.6e-09    | bounded     1.8e-11    | bounded     4.1e-11   
+  1.00e+08 | exact       0.0e+00    | bounded     4.9e-08    | bounded     3.8e-09    | bounded     4.9e-08    | bounded     4.9e-08    | bounded     3.8e-09    | bounded     1.1e-09   
+  1.00e+10 | exact       0.0e+00    | bounded     1.0e-05    | bounded     4.4e-07    | bounded     1.0e-05    | bounded     1.0e-05    | bounded     1.4e-06    | bounded     1.6e-07   
+  1.00e+12 | exact       0.0e+00    | indeterminate 6.4e-04  | bounded     4.8e-06    | indeterminate 6.4e-04  | indeterminate 6.4e-04  | indeterminate 4.8e-06  | bounded     1.9e-05   
+
+=== verdict totals over 70 (query,engine,variant) cells ===
+  exact          6
+  bounded        56
+  indeterminate  8
+  ANOMALY        0
+
+NC2 (bound soundness, HARD GATE): 0 anomalies -> PASS (no engine exceeded its bound)
