@@ -30,6 +30,7 @@ EXPRS = {
 }
 
 EPS = {"1e-9": 1e-9, "duckdb_1pct": 1e-2}
+SUMMARY = {}
 print(f"{'expression':40} {'n':>9} {'kappa':>11} {'B=g_n*k':>11} {'verdict':>14} | eps soundness")
 print("-" * 122)
 for name, q in EXPRS.items():
@@ -47,9 +48,17 @@ for name, q in EXPRS.items():
         ke = oracle.kappa_eps(n, ev)
         notes.append(f"{en}: {'too LAX (FN risk)' if kap < ke else 'too STRICT (FP risk)'} "
                      f"by {float(ev/B) if kap<ke else float(B/Fraction(ev)):.3g}x")
+    SUMMARY[name] = {"n": n, "kappa": float(kap), "sound_bound": float(B),
+                     "decidable": bool(decidable),
+                     "eps_1e-9_too_lax_by": float(1e-9/B), "eps_1pct_too_lax_by": float(1e-2/B)}
     print(f"{name:40} {n:>9,} {float(kap):11.3e} {float(B):11.3e} "
           f"{('decidable' if decidable else 'INDETERMINATE'):>14} | " + " ; ".join(notes))
 
 print(f"\nkappa*(plain) at these n: {float(oracle.kappa_star(600572)):.3e} (n=600k)")
 print("\nAll-positive columns have kappa = 1 EXACTLY (no cancellation). Signed expressions are")
 print("where cancellation -- and the whole testability question -- actually arises.")
+
+import json, os
+os.makedirs("results", exist_ok=True)
+json.dump(SUMMARY, open("results/e2.json","w"), indent=1)
+print("\nwrote results/e2.json")

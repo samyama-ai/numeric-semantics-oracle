@@ -1,0 +1,41 @@
+{
+ "n": 500000,
+ "exact": 499831.9774705774,
+ "duckdb_by_threads": {
+  "1": {
+   "sum": 499831.97747057665,
+   "bits": "411e81dfe8ee0bfe"
+  },
+  "2": {
+   "sum": 499831.9774705814,
+   "bits": "411e81dfe8ee0c50"
+  },
+  "4": {
+   "sum": 499831.97747057944,
+   "bits": "411e81dfe8ee0c2e"
+  },
+  "8": {
+   "sum": 499831.9774705798,
+   "bits": "411e81dfe8ee0c34"
+  }
+ },
+ "postgres_by_workers": {
+  "0": {
+   "sum": 499831.97747057665,
+   "bits": "411e81dfe8ee0bfe"
+  },
+  "2": {
+   "sum": 499831.9774705762,
+   "bits": "411e81dfe8ee0bf6"
+  },
+  "4": {
+   "sum": 499831.9774705753,
+   "bits": "411e81dfe8ee0be7"
+  }
+ },
+ "duckdb_bit_stable_across_threads": false,
+ "postgres_bit_stable_across_workers": false,
+ "duckdb_equals_postgres_at_defaults": false,
+ "sequential_plans_agree": true,
+ "conclusion": "Neither engine is bit-stable across thread/worker counts. At default parallel settings DuckDB and PostgreSQL do NOT agree. The bit-identity reported at n=10,000 was an artifact of sequential plans; the 'zero differential power' claim does not hold under default configurations."
+}

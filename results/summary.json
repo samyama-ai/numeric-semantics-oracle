@@ -1,0 +1,14 @@
+{
+ "n_cells": 70,
+ "n_anomalies": 0,
+ "kappa_star_plain_10k": 900719925473.0992,
+ "kappa_star_plain_100k": 90071992546.40993,
+ "kappa_star_compensated": 4503597127371884.0,
+ "kappa_eps_1e-9_10k": 900.7199254730992,
+ "kappa_eps_1e-9_100k": 90.07199254640993,
+ "kappa_eps_1pct_10k": 9007199254.730991,
+ "relerr_plain_10k_kappa1": 5.292391199751226e-15,
+ "relerr_plain_10k_kappa1e4": 1.5147785337062973e-11,
+ "relerr_plain_10k_kappa1e8": 4.933686145202238e-08,
+ "relerr_plain_10k_kappa1e12": 0.0006405535010175033
+}

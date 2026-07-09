@@ -1,0 +1,42 @@
+{
+ "Q1  sum(l_quantity)": {
+  "n": 600572,
+  "kappa": 1.0,
+  "sound_bound": 6.667688623896376e-11,
+  "decidable": true,
+  "eps_1e-9_too_lax_by": 14.997700948662974,
+  "eps_1pct_too_lax_by": 149977009.48662975
+ },
+ "Q1  sum(l_extendedprice)": {
+  "n": 600572,
+  "kappa": 1.0,
+  "sound_bound": 6.667688623896376e-11,
+  "decidable": true,
+  "eps_1e-9_too_lax_by": 14.997700948662974,
+  "eps_1pct_too_lax_by": 149977009.48662975
+ },
+ "Q1  sum(l_extprice*(1-l_discount))": {
+  "n": 600572,
+  "kappa": 1.0,
+  "sound_bound": 6.667688623896376e-11,
+  "decidable": true,
+  "eps_1e-9_too_lax_by": 14.997700948662974,
+  "eps_1pct_too_lax_by": 149977009.48662975
+ },
+ "Q6  sum(l_extprice*l_discount)": {
+  "n": 600572,
+  "kappa": 1.0,
+  "sound_bound": 6.667688623896376e-11,
+  "decidable": true,
+  "eps_1e-9_too_lax_by": 14.997700948662974,
+  "eps_1pct_too_lax_by": 149977009.48662975
+ },
+ "Q9  sum(amount)  [SIGNED profit]": {
+  "n": 600572,
+  "kappa": 1.0012494124003346,
+  "sound_bound": 6.676019316744643e-11,
+  "decidable": true,
+  "eps_1e-9_too_lax_by": 14.97898601778791,
+  "eps_1pct_too_lax_by": 149789860.1778791
+ }
+}
