@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the paper."
+title: "A Condition-Aware Numeric Oracle for Differential Testing of SQL Aggregates"
+authors:
+  - family-names: Mandarapu
+    given-names: Madhulatha
+  - family-names: Kunkunuru
+    given-names: Sandeep
+license: MIT
+repository-code: "https://github.com/samyama-ai/numeric-semantics-oracle"
+preferred-citation:
+  type: article
+  title: "Bounded, Indeterminate, or a Bug: A Condition-Aware Oracle for Differential Testing of SQL Aggregates"
+  authors:
+    - family-names: Mandarapu
+      given-names: Madhulatha
+    - family-names: Kunkunuru
+      given-names: Sandeep
+  year: 2026
