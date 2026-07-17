@@ -16,6 +16,11 @@ class Engine:
     def sums(self):
         """-> dict: variant name -> float result of SUM(x)"""
         raise NotImplementedError
+    def variances(self):
+        """-> dict: variant name -> float result of population VARIANCE(x). Which algorithm
+        the engine uses (one-pass vs Welford/two-pass) is RECOVERED by fitting the measured
+        exponent p, not assumed. Vendor docs are corroboration, not the finding."""
+        raise NotImplementedError
     def readback(self):
         """-> list[float] of stored values, in any order (for bit-exactness check)"""
         raise NotImplementedError
@@ -44,15 +49,30 @@ class Engine:
         return struct.pack(">d", self.readback()[0])[0] & 0x80 != 0
 
 
+class _WelfordVarPop:
+    """SQLite aggregate UDF: population variance by Welford's online algorithm. SQLite ships
+    no native variance, so this is our KNOWN-STABLE (p=1) reference point -- documented, not a
+    measurement of SQLite's own choice (it has none)."""
+    def __init__(self): self.k = 0; self.mean = 0.0; self.m2 = 0.0
+    def step(self, x):
+        if x is None: return
+        self.k += 1; d = x - self.mean; self.mean += d / self.k; self.m2 += d * (x - self.mean)
+    def finalize(self): return None if self.k == 0 else self.m2 / self.k
+
+
 class SQLite(Engine):
     name = "sqlite"
     def load(self, xs):
         self.c = sqlite3.connect(":memory:")
+        self.c.create_aggregate("welford_var_pop", 1, _WelfordVarPop)
         self.c.execute("CREATE TABLE t(x REAL)")
         self.c.executemany("INSERT INTO t VALUES (?)", ((v,) for v in xs))
     def sums(self):
         # SQLite sum()/avg() use Kahan-Babuska-Neumaier since 3.43.0 (vendor-documented background)
         return {"kbn_default": self.c.execute("SELECT sum(x) FROM t").fetchone()[0]}
+    def variances(self):
+        # no native VARIANCE in SQLite; our Welford UDF is the stable reference (expect p~1)
+        return {"welford_udf": self.c.execute("SELECT welford_var_pop(x) FROM t").fetchone()[0]}
     def readback(self):
         return [r[0] for r in self.c.execute("SELECT x FROM t")]
     def close(self): self.c.close()
@@ -71,6 +91,8 @@ class DuckDB(Engine):
             "plain": self.c.execute("SELECT sum(x) FROM t").fetchone()[0],
             "fsum_kahan": self.c.execute("SELECT fsum(x) FROM t").fetchone()[0],
         }
+    def variances(self):
+        return {"var_pop": self.c.execute("SELECT var_pop(x) FROM t").fetchone()[0]}
     def readback(self):
         return [r[0] for r in self.c.execute("SELECT x FROM t").fetchall()]
     def close(self): self.c.close()
@@ -88,6 +110,9 @@ class Postgres(Engine):
     def sums(self):
         cur = self.c.cursor(); cur.execute("SELECT sum(x) FROM t")
         return {"plain": cur.fetchone()[0]}
+    def variances(self):
+        cur = self.c.cursor(); cur.execute("SELECT var_pop(x) FROM t")
+        return {"var_pop": cur.fetchone()[0]}
     def readback(self):
         cur = self.c.cursor(); cur.execute("SELECT x FROM t"); return [r[0] for r in cur]
     def close(self): self.c.close()
@@ -105,6 +130,10 @@ class MySQL(Engine):
     def sums(self):
         cur = self.c.cursor(); cur.execute("SELECT sum(x) FROM t")
         return {"plain": float(cur.fetchone()[0])}
+    def variances(self):
+        cur = self.c.cursor(); cur.execute("SELECT var_pop(x) FROM t")
+        v = cur.fetchone()[0]
+        return {"var_pop": None if v is None else float(v)}
     def readback(self):
         cur = self.c.cursor(); cur.execute("SELECT x FROM t"); return [r[0] for r in cur]
     def close(self): self.c.close()
@@ -122,6 +151,8 @@ class ClickHouse(Engine):
             "plain": self.c.query("SELECT sum(x) FROM t").result_rows[0][0],
             "sumKahan": self.c.query("SELECT sumKahan(x) FROM t").result_rows[0][0],
         }
+    def variances(self):
+        return {"var_pop": self.c.query("SELECT varPop(x) FROM t").result_rows[0][0]}
     def readback(self):
         return [r[0] for r in self.c.query("SELECT x FROM t").result_rows]
     def close(self): pass

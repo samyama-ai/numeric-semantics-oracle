@@ -1,0 +1,18 @@
+n = 4000, sweeping mean/std ratio 1 .. 1e9
+
+     kappa_V   onepass_relerr   welford_relerr
+   1.419e+00        3.430e-15        1.753e-15
+   1.422e+01        5.619e-13        3.034e-15
+   2.032e+02        1.114e-10        7.009e-15
+   2.907e+03        4.843e-08        1.334e-13
+   4.152e+04        2.595e-06        2.209e-12
+   5.851e+05        8.010e-04        1.815e-12
+   8.411e+06        4.115e-01        1.529e-11
+   1.225e+08        1.562e+02        3.980e-09
+
+fitted exponent p (log-log slope of rel_err vs kappa_V):
+  ONE-PASS : p = 1.992   (predict ~2)   [25 pts in fit window]
+  WELFORD  : p = 0.968   (predict ~1)   [35 pts in fit window]
+
+DE-RISK VERDICT: one-pass p~2 PASS, welford p~1 PASS
+=> general bound rel_err <= C_A * kappa_f^p is SUPPORTED; paper21 (SUM) is the p=1 special case.

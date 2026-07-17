@@ -1,0 +1,230 @@
+{
+ "kstar_onepass_10k": 949062.6562419888,
+ "kstar_welford_10k": 900719925473.0992,
+ "ve3a_tpch": {
+  "l_quantity": {
+   "n": 600572,
+   "kappa_V": 2.033554219785133,
+   "crosses_onepass": false,
+   "crosses_welford": false
+  },
+  "l_extendedprice": {
+   "n": 600572,
+   "kappa_V": 1.9165302493680474,
+   "crosses_onepass": false,
+   "crosses_welford": false
+  },
+  "l_discount": {
+   "n": 600572,
+   "kappa_V": 1.8736385416071673,
+   "crosses_onepass": false,
+   "crosses_welford": false
+  },
+  "l_extprice*(1-l_discount)": {
+   "n": 600572,
+   "kappa_V": 1.913483478911228,
+   "crosses_onepass": false,
+   "crosses_welford": false
+  },
+  "l_shipdate [days since 1970]": {
+   "n": 600572,
+   "kappa_V": 13.401185535608384,
+   "crosses_onepass": false,
+   "crosses_welford": false
+  },
+  "l_shipdate [unix seconds]": {
+   "n": 600572,
+   "kappa_V": 13.401185535608384,
+   "crosses_onepass": false,
+   "crosses_welford": false
+  },
+  "o_orderdate [days since 1970]": {
+   "n": 150000,
+   "kappa_V": 13.33279742521476,
+   "crosses_onepass": false,
+   "crosses_welford": false
+  }
+ },
+ "ve3b_conventions": [
+  {
+   "case": "epoch-nanosecond timestamps, events in a 1-hour window (pandas datetime64[ns])",
+   "offset": 1.7e+18,
+   "spread": 1040000000000.0,
+   "n": 10000,
+   "kappa_V": 1633591.706781588,
+   "crosses_onepass": true,
+   "engines": {
+    "sqlite": {
+     "relerr": 1.2301119676004306e-10,
+     "verdict": "bounded"
+    },
+    "duckdb": {
+     "relerr": 1.2301119676004306e-10,
+     "verdict": "bounded"
+    },
+    "postgres": {
+     "relerr": 1.1541782138476803e-11,
+     "verdict": "bounded"
+    },
+    "mysql": {
+     "relerr": 1.2301119676004306e-10,
+     "verdict": "bounded"
+    },
+    "clickhouse": {
+     "relerr": 0.013172791256194432,
+     "verdict": "indeterminate"
+    }
+   }
+  },
+  {
+   "case": "unix-second timestamps, events in a 1-minute window",
+   "offset": 1700000000.0,
+   "spread": 17.3,
+   "n": 10000,
+   "kappa_V": 97687559.1765394,
+   "crosses_onepass": true,
+   "engines": {
+    "sqlite": {
+     "relerr": 4.324919003796021e-10,
+     "verdict": "bounded"
+    },
+    "duckdb": {
+     "relerr": 4.324919003796021e-10,
+     "verdict": "bounded"
+    },
+    "postgres": {
+     "relerr": 8.68026522443058e-10,
+     "verdict": "bounded"
+    },
+    "mysql": {
+     "relerr": 4.324919003796021e-10,
+     "verdict": "bounded"
+    },
+    "clickhouse": {
+     "relerr": 21.159530845092615,
+     "verdict": "indeterminate"
+    }
+   }
+  },
+  {
+   "case": "Kelvin temperature, milli-kelvin-precision sensor around 300 K",
+   "offset": 300.0,
+   "spread": 0.0003,
+   "n": 10000,
+   "kappa_V": 1005030.2965213502,
+   "crosses_onepass": true,
+   "engines": {
+    "sqlite": {
+     "relerr": 2.6832607531294116e-11,
+     "verdict": "bounded"
+    },
+    "duckdb": {
+     "relerr": 2.6832607531294116e-11,
+     "verdict": "bounded"
+    },
+    "postgres": {
+     "relerr": 4.234244828971653e-11,
+     "verdict": "bounded"
+    },
+    "mysql": {
+     "relerr": 2.6832607531294116e-11,
+     "verdict": "bounded"
+    },
+    "clickhouse": {
+     "relerr": 0.007711486768396748,
+     "verdict": "indeterminate"
+    }
+   }
+  },
+  {
+   "case": "UTM easting (metres), survey points over a ~1 m grid",
+   "offset": 500000.0,
+   "spread": 0.3,
+   "n": 10000,
+   "kappa_V": 1690910.7527501476,
+   "crosses_onepass": true,
+   "engines": {
+    "sqlite": {
+     "relerr": 1.2716489797141856e-10,
+     "verdict": "bounded"
+    },
+    "duckdb": {
+     "relerr": 1.2716489797141856e-10,
+     "verdict": "bounded"
+    },
+    "postgres": {
+     "relerr": 8.364948374108881e-11,
+     "verdict": "bounded"
+    },
+    "mysql": {
+     "relerr": 1.2716489797141856e-10,
+     "verdict": "bounded"
+    },
+    "clickhouse": {
+     "relerr": 0.016442364224815785,
+     "verdict": "indeterminate"
+    }
+   }
+  },
+  {
+   "case": "intraday price of a high-value index around 500,000 units, tick 0.5",
+   "offset": 500000.0,
+   "spread": 0.5,
+   "n": 10000,
+   "kappa_V": 994190.387387934,
+   "crosses_onepass": true,
+   "engines": {
+    "sqlite": {
+     "relerr": 2.9628983030578405e-11,
+     "verdict": "bounded"
+    },
+    "duckdb": {
+     "relerr": 2.9628983030578405e-11,
+     "verdict": "bounded"
+    },
+    "postgres": {
+     "relerr": 2.66160698631664e-11,
+     "verdict": "bounded"
+    },
+    "mysql": {
+     "relerr": 2.9628983030578405e-11,
+     "verdict": "bounded"
+    },
+    "clickhouse": {
+     "relerr": 0.005019890416646393,
+     "verdict": "indeterminate"
+    }
+   }
+  },
+  {
+   "case": "daily close price around 100 over a year (std ~ 15) -- coarse, should stay decidable",
+   "offset": 100.0,
+   "spread": 15.0,
+   "n": 10000,
+   "kappa_V": 6.771803448420675,
+   "crosses_onepass": false,
+   "engines": {
+    "sqlite": {
+     "relerr": 1.3489746566032123e-15,
+     "verdict": "bounded"
+    },
+    "duckdb": {
+     "relerr": 1.3489746566032123e-15,
+     "verdict": "bounded"
+    },
+    "postgres": {
+     "relerr": 9.458845296121598e-16,
+     "verdict": "bounded"
+    },
+    "mysql": {
+     "relerr": 1.3489746566032123e-15,
+     "verdict": "bounded"
+    },
+    "clickhouse": {
+     "relerr": 1.645183476359634e-13,
+     "verdict": "bounded"
+    }
+   }
+  }
+ ]
+}

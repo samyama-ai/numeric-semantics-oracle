@@ -1,0 +1,35 @@
+{
+ "measured_exponent_p": {
+  "clickhouse": 2.048,
+  "duckdb": 0.899,
+  "mysql": 0.899,
+  "postgres": 1.055,
+  "sqlite": 0.899
+ },
+ "recovered_algorithm": {
+  "clickhouse": "var_onepass",
+  "duckdb": "var_welford",
+  "mysql": "var_welford",
+  "postgres": "var_welford",
+  "sqlite": "var_welford"
+ },
+ "kappa_star_10k": {
+  "sum_plain": 900719925473.0992,
+  "var_welford": 900719925473.0992,
+  "var_onepass": 949062.6562419888
+ },
+ "nc": {
+  "NC1v_exact_gt": true,
+  "NC2v_anomalies": 0,
+  "NC3v_stable_collapse": true
+ },
+ "n_cells": 70,
+ "headline": "ClickHouse varPop measured p~2 (one-pass); DuckDB/MySQL/Postgres p~1 (Welford). One-pass testability zone ~1e6x narrower than SUM. 0 anomalies (NC2v PASS).",
+ "clickhouse_p": 2.048,
+ "postgres_p": 1.055,
+ "kstar_onepass_10k": 949062.6562419888,
+ "nc2v_anomalies": 0,
+ "n_variance_cells": 70,
+ "ve3b_clickhouse_max_relerr": 21.159530845092615,
+ "ve3b_conventions_crossing": 5
+}

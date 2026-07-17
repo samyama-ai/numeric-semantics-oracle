@@ -1,0 +1,824 @@
+{
+ "rows": [
+  {
+   "n": 10000,
+   "ratio": 1.0,
+   "kappa_V": 1.421731629384236,
+   "engine": "sqlite",
+   "variant": "welford_udf",
+   "relerr": 3.88450673634754e-15,
+   "verdict": "bounded",
+   "bound": 1.5784391897819708e-12,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 1.0,
+   "kappa_V": 1.421731629384236,
+   "engine": "duckdb",
+   "variant": "var_pop",
+   "relerr": 3.88450673634754e-15,
+   "verdict": "bounded",
+   "bound": 1.5784391897819708e-12,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 1.0,
+   "kappa_V": 1.421731629384236,
+   "engine": "postgres",
+   "variant": "var_pop",
+   "relerr": 3.657727957038539e-15,
+   "verdict": "bounded",
+   "bound": 1.5784391897819708e-12,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 1.0,
+   "kappa_V": 1.421731629384236,
+   "engine": "mysql",
+   "variant": "var_pop",
+   "relerr": 3.88450673634754e-15,
+   "verdict": "bounded",
+   "bound": 1.5784391897819708e-12,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 1.0,
+   "kappa_V": 1.421731629384236,
+   "engine": "clickhouse",
+   "variant": "var_pop",
+   "relerr": 1.9751129121448281e-16,
+   "verdict": "bounded",
+   "bound": 2.244116921172655e-12,
+   "assigned_algo": "var_onepass"
+  },
+  {
+   "n": 10000,
+   "ratio": 10.0,
+   "kappa_V": 10.121413554042118,
+   "engine": "sqlite",
+   "variant": "welford_udf",
+   "relerr": 6.915370198796714e-16,
+   "verdict": "bounded",
+   "bound": 1.1237026369463171e-11,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 10.0,
+   "kappa_V": 10.121413554042118,
+   "engine": "duckdb",
+   "variant": "var_pop",
+   "relerr": 6.915370198796714e-16,
+   "verdict": "bounded",
+   "bound": 1.1237026369463171e-11,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 10.0,
+   "kappa_V": 10.121413554042118,
+   "engine": "postgres",
+   "variant": "var_pop",
+   "relerr": 9.16785755836195e-16,
+   "verdict": "bounded",
+   "bound": 1.1237026369463171e-11,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 10.0,
+   "kappa_V": 10.121413554042118,
+   "engine": "mysql",
+   "variant": "var_pop",
+   "relerr": 6.915370198796714e-16,
+   "verdict": "bounded",
+   "bound": 1.1237026369463171e-11,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 10.0,
+   "kappa_V": 10.121413554042118,
+   "engine": "clickhouse",
+   "variant": "var_pop",
+   "relerr": 1.8303038877668552e-13,
+   "verdict": "bounded",
+   "bound": 1.1373459100301322e-10,
+   "assigned_algo": "var_onepass"
+  },
+  {
+   "n": 10000,
+   "ratio": 100.0,
+   "kappa_V": 100.07060478623589,
+   "engine": "sqlite",
+   "variant": "welford_udf",
+   "relerr": 2.936346446078227e-15,
+   "verdict": "bounded",
+   "bound": 1.1110068952196682e-10,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 100.0,
+   "kappa_V": 100.07060478623589,
+   "engine": "duckdb",
+   "variant": "var_pop",
+   "relerr": 2.936346446078227e-15,
+   "verdict": "bounded",
+   "bound": 1.1110068952196682e-10,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 100.0,
+   "kappa_V": 100.07060478623589,
+   "engine": "postgres",
+   "variant": "var_pop",
+   "relerr": 1.763583854081135e-16,
+   "verdict": "bounded",
+   "bound": 1.1110068952196682e-10,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 100.0,
+   "kappa_V": 100.07060478623589,
+   "engine": "mysql",
+   "variant": "var_pop",
+   "relerr": 2.936346446078227e-15,
+   "verdict": "bounded",
+   "bound": 1.1110068952196682e-10,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 100.0,
+   "kappa_V": 100.07060478623589,
+   "engine": "clickhouse",
+   "variant": "var_pop",
+   "relerr": 1.367215727785895e-11,
+   "verdict": "bounded",
+   "bound": 1.1117913192631041e-08,
+   "assigned_algo": "var_onepass"
+  },
+  {
+   "n": 10000,
+   "ratio": 1000.0,
+   "kappa_V": 1003.0029126473223,
+   "engine": "sqlite",
+   "variant": "welford_udf",
+   "relerr": 1.9442321564159565e-14,
+   "verdict": "bounded",
+   "bound": 1.1135569273883881e-09,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 1000.0,
+   "kappa_V": 1003.0029126473223,
+   "engine": "duckdb",
+   "variant": "var_pop",
+   "relerr": 1.9442321564159565e-14,
+   "verdict": "bounded",
+   "bound": 1.1135569273883881e-09,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 1000.0,
+   "kappa_V": 1003.0029126473223,
+   "engine": "postgres",
+   "variant": "var_pop",
+   "relerr": 4.4332653095633735e-14,
+   "verdict": "bounded",
+   "bound": 1.1135569273883881e-09,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 1000.0,
+   "kappa_V": 1003.0029126473223,
+   "engine": "mysql",
+   "variant": "var_pop",
+   "relerr": 1.9442321564159565e-14,
+   "verdict": "bounded",
+   "bound": 1.1135569273883881e-09,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 1000.0,
+   "kappa_V": 1003.0029126473223,
+   "engine": "clickhouse",
+   "variant": "var_pop",
+   "relerr": 6.7031854193732615e-09,
+   "verdict": "bounded",
+   "bound": 1.1169008415691562e-06,
+   "assigned_algo": "var_onepass"
+  },
+  {
+   "n": 10000,
+   "ratio": 10000.0,
+   "kappa_V": 9960.164817993224,
+   "engine": "sqlite",
+   "variant": "welford_udf",
+   "relerr": 2.7345371839389414e-13,
+   "verdict": "bounded",
+   "bound": 1.1058004310009786e-08,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 10000.0,
+   "kappa_V": 9960.164817993224,
+   "engine": "duckdb",
+   "variant": "var_pop",
+   "relerr": 2.7345371839389414e-13,
+   "verdict": "bounded",
+   "bound": 1.1058004310009786e-08,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 10000.0,
+   "kappa_V": 9960.164817993224,
+   "engine": "postgres",
+   "variant": "var_pop",
+   "relerr": 3.581812221231774e-14,
+   "verdict": "bounded",
+   "bound": 1.1058004310009786e-08,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 10000.0,
+   "kappa_V": 9960.164817993224,
+   "engine": "mysql",
+   "variant": "var_pop",
+   "relerr": 2.7345371839389414e-13,
+   "verdict": "bounded",
+   "bound": 1.1058004310009786e-08,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 10000.0,
+   "kappa_V": 9960.164817993224,
+   "engine": "clickhouse",
+   "variant": "var_pop",
+   "relerr": 7.37932423790727e-08,
+   "verdict": "bounded",
+   "bound": 0.00011013954548577689,
+   "assigned_algo": "var_onepass"
+  },
+  {
+   "n": 10000,
+   "ratio": 100000.0,
+   "kappa_V": 99515.55588964962,
+   "engine": "sqlite",
+   "variant": "welford_udf",
+   "relerr": 4.795777260996811e-12,
+   "verdict": "bounded",
+   "bound": 1.1048446145718327e-07,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 100000.0,
+   "kappa_V": 99515.55588964962,
+   "engine": "duckdb",
+   "variant": "var_pop",
+   "relerr": 4.795777260996811e-12,
+   "verdict": "bounded",
+   "bound": 1.1048446145718327e-07,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 100000.0,
+   "kappa_V": 99515.55588964962,
+   "engine": "postgres",
+   "variant": "var_pop",
+   "relerr": 4.32541447225618e-12,
+   "verdict": "bounded",
+   "bound": 1.1048446145718327e-07,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 100000.0,
+   "kappa_V": 99515.55588964962,
+   "engine": "mysql",
+   "variant": "var_pop",
+   "relerr": 4.795777260996811e-12,
+   "verdict": "bounded",
+   "bound": 1.1048446145718327e-07,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 100000.0,
+   "kappa_V": 99515.55588964962,
+   "engine": "clickhouse",
+   "variant": "var_pop",
+   "relerr": 3.6770452780780204e-05,
+   "verdict": "bounded",
+   "bound": 0.010994922599080161,
+   "assigned_algo": "var_onepass"
+  },
+  {
+   "n": 10000,
+   "ratio": 1000000.0,
+   "kappa_V": 1001746.4856780593,
+   "engine": "sqlite",
+   "variant": "welford_udf",
+   "relerr": 7.619665424838749e-11,
+   "verdict": "bounded",
+   "bound": 1.1121620132383507e-06,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 1000000.0,
+   "kappa_V": 1001746.4856780593,
+   "engine": "duckdb",
+   "variant": "var_pop",
+   "relerr": 7.619665424838749e-11,
+   "verdict": "bounded",
+   "bound": 1.1121620132383507e-06,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 1000000.0,
+   "kappa_V": 1001746.4856780593,
+   "engine": "postgres",
+   "variant": "var_pop",
+   "relerr": 3.054288462611324e-11,
+   "verdict": "bounded",
+   "bound": 1.1121620132383507e-06,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 1000000.0,
+   "kappa_V": 1001746.4856780593,
+   "engine": "mysql",
+   "variant": "var_pop",
+   "relerr": 7.619665424838749e-11,
+   "verdict": "bounded",
+   "bound": 1.1121620132383507e-06,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 1000000.0,
+   "kappa_V": 1001746.4856780593,
+   "engine": "clickhouse",
+   "variant": "var_pop",
+   "relerr": 0.003295322363028706,
+   "verdict": "indeterminate",
+   "bound": 1.1141043882661532,
+   "assigned_algo": "var_onepass"
+  },
+  {
+   "n": 10000,
+   "ratio": 10000000.0,
+   "kappa_V": 9894850.155084707,
+   "engine": "sqlite",
+   "variant": "welford_udf",
+   "relerr": 3.773424862192475e-10,
+   "verdict": "bounded",
+   "bound": 1.0985490467403039e-05,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 10000000.0,
+   "kappa_V": 9894850.155084707,
+   "engine": "duckdb",
+   "variant": "var_pop",
+   "relerr": 3.773424862192475e-10,
+   "verdict": "bounded",
+   "bound": 1.0985490467403039e-05,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 10000000.0,
+   "kappa_V": 9894850.155084707,
+   "engine": "postgres",
+   "variant": "var_pop",
+   "relerr": 1.1649369748778481e-09,
+   "verdict": "bounded",
+   "bound": 1.0985490467403039e-05,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 10000000.0,
+   "kappa_V": 9894850.155084707,
+   "engine": "mysql",
+   "variant": "var_pop",
+   "relerr": 3.773424862192475e-10,
+   "verdict": "bounded",
+   "bound": 1.0985490467403039e-05,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 10000000.0,
+   "kappa_V": 9894850.155084707,
+   "engine": "clickhouse",
+   "variant": "var_pop",
+   "relerr": 1.1680760715959217,
+   "verdict": "indeterminate",
+   "bound": 108.69978205506453,
+   "assigned_algo": "var_onepass"
+  },
+  {
+   "n": 10000,
+   "ratio": 100000000.0,
+   "kappa_V": 99607363.26312761,
+   "engine": "sqlite",
+   "variant": "welford_udf",
+   "relerr": 2.2819162504057496e-10,
+   "verdict": "bounded",
+   "bound": 0.00011058638811704901,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 100000000.0,
+   "kappa_V": 99607363.26312761,
+   "engine": "duckdb",
+   "variant": "var_pop",
+   "relerr": 2.2819162504057496e-10,
+   "verdict": "bounded",
+   "bound": 0.00011058638811704901,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 100000000.0,
+   "kappa_V": 99607363.26312761,
+   "engine": "postgres",
+   "variant": "var_pop",
+   "relerr": 1.0305834880502336e-09,
+   "verdict": "bounded",
+   "bound": 0.00011058638811704901,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 100000000.0,
+   "kappa_V": 99607363.26312761,
+   "engine": "mysql",
+   "variant": "var_pop",
+   "relerr": 2.2819162504057496e-10,
+   "verdict": "bounded",
+   "bound": 0.00011058638811704901,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 100000000.0,
+   "kappa_V": 99607363.26312761,
+   "engine": "clickhouse",
+   "variant": "var_pop",
+   "relerr": 1.0,
+   "verdict": "indeterminate",
+   "bound": 11015.21853313212,
+   "assigned_algo": "var_onepass"
+  },
+  {
+   "n": 10000,
+   "ratio": 1000000000.0,
+   "kappa_V": 1002664207.3120049,
+   "engine": "sqlite",
+   "variant": "welford_udf",
+   "relerr": 6.786587184162194e-09,
+   "verdict": "bounded",
+   "bound": 0.001113180888926555,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 1000000000.0,
+   "kappa_V": 1002664207.3120049,
+   "engine": "duckdb",
+   "variant": "var_pop",
+   "relerr": 6.786587184162194e-09,
+   "verdict": "bounded",
+   "bound": 0.001113180888926555,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 1000000000.0,
+   "kappa_V": 1002664207.3120049,
+   "engine": "postgres",
+   "variant": "var_pop",
+   "relerr": 5.10267535424211e-08,
+   "verdict": "bounded",
+   "bound": 0.001113180888926555,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 1000000000.0,
+   "kappa_V": 1002664207.3120049,
+   "engine": "mysql",
+   "variant": "var_pop",
+   "relerr": 6.786587184162194e-09,
+   "verdict": "bounded",
+   "bound": 0.001113180888926555,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 10000,
+   "ratio": 1000000000.0,
+   "kappa_V": 1002664207.3120049,
+   "engine": "clickhouse",
+   "variant": "var_pop",
+   "relerr": 12016.545871538854,
+   "verdict": "indeterminate",
+   "bound": 1116146.6335904172,
+   "assigned_algo": "var_onepass"
+  },
+  {
+   "n": 100000,
+   "ratio": 1.0,
+   "kappa_V": 1.4134097003138677,
+   "engine": "sqlite",
+   "variant": "welford_udf",
+   "relerr": 7.740064390840358e-16,
+   "verdict": "bounded",
+   "bound": 1.5691999925344197e-11,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 100000,
+   "ratio": 1.0,
+   "kappa_V": 1.4134097003138677,
+   "engine": "duckdb",
+   "variant": "var_pop",
+   "relerr": 7.740064390840358e-16,
+   "verdict": "bounded",
+   "bound": 1.5691999925344197e-11,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 100000,
+   "ratio": 1.0,
+   "kappa_V": 1.4134097003138677,
+   "engine": "postgres",
+   "variant": "var_pop",
+   "relerr": 1.2170862256963627e-15,
+   "verdict": "bounded",
+   "bound": 1.5691999925344197e-11,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 100000,
+   "ratio": 1.0,
+   "kappa_V": 1.4134097003138677,
+   "engine": "mysql",
+   "variant": "var_pop",
+   "relerr": 7.740064390840358e-16,
+   "verdict": "bounded",
+   "bound": 1.5691999925344197e-11,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 100000,
+   "ratio": 1.0,
+   "kappa_V": 1.4134097003138677,
+   "engine": "clickhouse",
+   "variant": "var_pop",
+   "relerr": 1.694918502540904e-14,
+   "verdict": "bounded",
+   "bound": 2.2179224911805977e-11,
+   "assigned_algo": "var_onepass"
+  },
+  {
+   "n": 100000,
+   "ratio": 1000.0,
+   "kappa_V": 1002.2015873230049,
+   "engine": "sqlite",
+   "variant": "welford_udf",
+   "relerr": 1.5024011636378623e-14,
+   "verdict": "bounded",
+   "bound": 1.1126672775742326e-08,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 100000,
+   "ratio": 1000.0,
+   "kappa_V": 1002.2015873230049,
+   "engine": "duckdb",
+   "variant": "var_pop",
+   "relerr": 1.5024011636378623e-14,
+   "verdict": "bounded",
+   "bound": 1.1126672775742326e-08,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 100000,
+   "ratio": 1000.0,
+   "kappa_V": 1002.2015873230049,
+   "engine": "postgres",
+   "variant": "var_pop",
+   "relerr": 5.05447974925186e-14,
+   "verdict": "bounded",
+   "bound": 1.1126672775742326e-08,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 100000,
+   "ratio": 1000.0,
+   "kappa_V": 1002.2015873230049,
+   "engine": "mysql",
+   "variant": "var_pop",
+   "relerr": 1.5024011636378623e-14,
+   "verdict": "bounded",
+   "bound": 1.1126672775742326e-08,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 100000,
+   "ratio": 1000.0,
+   "kappa_V": 1002.2015873230049,
+   "engine": "clickhouse",
+   "variant": "var_pop",
+   "relerr": 3.2264139288471164e-08,
+   "verdict": "bounded",
+   "bound": 1.1151169117472624e-05,
+   "assigned_algo": "var_onepass"
+  },
+  {
+   "n": 100000,
+   "ratio": 1000000.0,
+   "kappa_V": 1000103.5558592934,
+   "engine": "sqlite",
+   "variant": "welford_udf",
+   "relerr": 5.880588057015102e-12,
+   "verdict": "bounded",
+   "bound": 1.1103379947368063e-05,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 100000,
+   "ratio": 1000000.0,
+   "kappa_V": 1000103.5558592934,
+   "engine": "duckdb",
+   "variant": "var_pop",
+   "relerr": 5.880588057015102e-12,
+   "verdict": "bounded",
+   "bound": 1.1103379947368063e-05,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 100000,
+   "ratio": 1000000.0,
+   "kappa_V": 1000103.5558592934,
+   "engine": "postgres",
+   "variant": "var_pop",
+   "relerr": 5.165468125603904e-11,
+   "verdict": "bounded",
+   "bound": 1.1103379947368063e-05,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 100000,
+   "ratio": 1000000.0,
+   "kappa_V": 1000103.5558592934,
+   "engine": "mysql",
+   "variant": "var_pop",
+   "relerr": 5.880588057015102e-12,
+   "verdict": "bounded",
+   "bound": 1.1103379947368063e-05,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 100000,
+   "ratio": 1000000.0,
+   "kappa_V": 1000103.5558592934,
+   "engine": "clickhouse",
+   "variant": "var_pop",
+   "relerr": 0.006194203142222039,
+   "verdict": "indeterminate",
+   "bound": 11.104529767419573,
+   "assigned_algo": "var_onepass"
+  },
+  {
+   "n": 100000,
+   "ratio": 1000000000.0,
+   "kappa_V": 1002617258.9646484,
+   "engine": "sqlite",
+   "variant": "welford_udf",
+   "relerr": 2.7955860122766726e-08,
+   "verdict": "bounded",
+   "bound": 0.01113128765801474,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 100000,
+   "ratio": 1000000000.0,
+   "kappa_V": 1002617258.9646484,
+   "engine": "duckdb",
+   "variant": "var_pop",
+   "relerr": 2.7955860122766726e-08,
+   "verdict": "bounded",
+   "bound": 0.01113128765801474,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 100000,
+   "ratio": 1000000000.0,
+   "kappa_V": 1002617258.9646484,
+   "engine": "postgres",
+   "variant": "var_pop",
+   "relerr": 1.7952930806931648e-08,
+   "verdict": "bounded",
+   "bound": 0.01113128765801474,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 100000,
+   "ratio": 1000000000.0,
+   "kappa_V": 1002617258.9646484,
+   "engine": "mysql",
+   "variant": "var_pop",
+   "relerr": 2.7955860122766726e-08,
+   "verdict": "bounded",
+   "bound": 0.01113128765801474,
+   "assigned_algo": "var_welford"
+  },
+  {
+   "n": 100000,
+   "ratio": 1000000000.0,
+   "kappa_V": 1002617258.9646484,
+   "engine": "clickhouse",
+   "variant": "var_pop",
+   "relerr": 1.0,
+   "verdict": "indeterminate",
+   "bound": 11160421.120425759,
+   "assigned_algo": "var_onepass"
+  }
+ ],
+ "fits": {
+  "clickhouse": {
+   "p": 2.0479170457064746,
+   "n_fit": 6,
+   "assigned_algo": "var_onepass",
+   "label": "VARIANCE (textbook one-pass)"
+  },
+  "duckdb": {
+   "p": 0.8991160139919144,
+   "n_fit": 8,
+   "assigned_algo": "var_welford",
+   "label": "VARIANCE (Welford/two-pass)"
+  },
+  "mysql": {
+   "p": 0.8991160139919144,
+   "n_fit": 8,
+   "assigned_algo": "var_welford",
+   "label": "VARIANCE (Welford/two-pass)"
+  },
+  "postgres": {
+   "p": 1.0547940283146944,
+   "n_fit": 7,
+   "assigned_algo": "var_welford",
+   "label": "VARIANCE (Welford/two-pass)"
+  },
+  "sqlite": {
+   "p": 0.8991160139919144,
+   "n_fit": 8,
+   "assigned_algo": "var_welford",
+   "label": "VARIANCE (Welford/two-pass)"
+  }
+ },
+ "anomalies": [],
+ "boundaries": {
+  "10000": {
+   "sum_plain": 900719925473.0992,
+   "var_welford": 900719925473.0992,
+   "var_onepass": 949062.6562419888
+  },
+  "100000": {
+   "sum_plain": 90071992546.40993,
+   "var_welford": 90071992546.40993,
+   "var_onepass": 300119.9635919109
+  }
+ },
+ "nc": {
+  "NC1v_exact_gt": true,
+  "NC2v_anomalies": 0,
+  "NC3v_stable_collapse": true
+ }
+}
