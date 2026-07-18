@@ -1,0 +1,10 @@
+{
+ "n_configs": 84,
+ "n_engine_tests": 360,
+ "skipped": 0,
+ "out_of_domain": {
+  "subnormal": 12,
+  "overflow": 12
+ },
+ "anomalies": []
+}
