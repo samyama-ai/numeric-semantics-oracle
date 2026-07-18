@@ -1,0 +1,472 @@
+{
+ "rows": [
+  {
+   "ratio": 1.0,
+   "kappa_V": 1.421731629384236,
+   "engine": "sqlite",
+   "relerr": 3.88450673634754e-15
+  },
+  {
+   "ratio": 1.0,
+   "kappa_V": 1.421731629384236,
+   "engine": "duckdb",
+   "relerr": 3.88450673634754e-15
+  },
+  {
+   "ratio": 1.0,
+   "kappa_V": 1.421731629384236,
+   "engine": "postgres",
+   "relerr": 3.657727957038539e-15
+  },
+  {
+   "ratio": 1.0,
+   "kappa_V": 1.421731629384236,
+   "engine": "mysql",
+   "relerr": 3.88450673634754e-15
+  },
+  {
+   "ratio": 1.0,
+   "kappa_V": 1.421731629384236,
+   "engine": "clickhouse",
+   "relerr": 1.9751129121448281e-16
+  },
+  {
+   "ratio": 1.0,
+   "kappa_V": 1.421731629384236,
+   "engine": "questdb",
+   "relerr": 3.88450673634754e-15
+  },
+  {
+   "ratio": 1.0,
+   "kappa_V": 1.421731629384236,
+   "engine": "datafusion",
+   "relerr": 1.8434977225665287e-15
+  },
+  {
+   "ratio": 10.0,
+   "kappa_V": 10.121413554042118,
+   "engine": "sqlite",
+   "relerr": 6.915370198796714e-16
+  },
+  {
+   "ratio": 10.0,
+   "kappa_V": 10.121413554042118,
+   "engine": "duckdb",
+   "relerr": 6.915370198796714e-16
+  },
+  {
+   "ratio": 10.0,
+   "kappa_V": 10.121413554042118,
+   "engine": "postgres",
+   "relerr": 9.16785755836195e-16
+  },
+  {
+   "ratio": 10.0,
+   "kappa_V": 10.121413554042118,
+   "engine": "mysql",
+   "relerr": 6.915370198796714e-16
+  },
+  {
+   "ratio": 10.0,
+   "kappa_V": 10.121413554042118,
+   "engine": "clickhouse",
+   "relerr": 1.8303038877668552e-13
+  },
+  {
+   "ratio": 10.0,
+   "kappa_V": 10.121413554042118,
+   "engine": "questdb",
+   "relerr": 6.915370198796714e-16
+  },
+  {
+   "ratio": 10.0,
+   "kappa_V": 10.121413554042118,
+   "engine": "datafusion",
+   "relerr": 3.5366391594488605e-16
+  },
+  {
+   "ratio": 100.0,
+   "kappa_V": 100.07060478623589,
+   "engine": "sqlite",
+   "relerr": 2.936346446078227e-15
+  },
+  {
+   "ratio": 100.0,
+   "kappa_V": 100.07060478623589,
+   "engine": "duckdb",
+   "relerr": 2.936346446078227e-15
+  },
+  {
+   "ratio": 100.0,
+   "kappa_V": 100.07060478623589,
+   "engine": "postgres",
+   "relerr": 1.763583854081135e-16
+  },
+  {
+   "ratio": 100.0,
+   "kappa_V": 100.07060478623589,
+   "engine": "mysql",
+   "relerr": 2.936346446078227e-15
+  },
+  {
+   "ratio": 100.0,
+   "kappa_V": 100.07060478623589,
+   "engine": "clickhouse",
+   "relerr": 1.367215727785895e-11
+  },
+  {
+   "ratio": 100.0,
+   "kappa_V": 100.07060478623589,
+   "engine": "questdb",
+   "relerr": 2.936346446078227e-15
+  },
+  {
+   "ratio": 100.0,
+   "kappa_V": 100.07060478623589,
+   "engine": "datafusion",
+   "relerr": 4.048026743037634e-15
+  },
+  {
+   "ratio": 1000.0,
+   "kappa_V": 1003.0029126473223,
+   "engine": "sqlite",
+   "relerr": 1.9442321564159565e-14
+  },
+  {
+   "ratio": 1000.0,
+   "kappa_V": 1003.0029126473223,
+   "engine": "duckdb",
+   "relerr": 1.9442321564159565e-14
+  },
+  {
+   "ratio": 1000.0,
+   "kappa_V": 1003.0029126473223,
+   "engine": "postgres",
+   "relerr": 4.4332653095633735e-14
+  },
+  {
+   "ratio": 1000.0,
+   "kappa_V": 1003.0029126473223,
+   "engine": "mysql",
+   "relerr": 1.9442321564159565e-14
+  },
+  {
+   "ratio": 1000.0,
+   "kappa_V": 1003.0029126473223,
+   "engine": "clickhouse",
+   "relerr": 6.7031854193732615e-09
+  },
+  {
+   "ratio": 1000.0,
+   "kappa_V": 1003.0029126473223,
+   "engine": "questdb",
+   "relerr": 1.9442321564159565e-14
+  },
+  {
+   "ratio": 1000.0,
+   "kappa_V": 1003.0029126473223,
+   "engine": "datafusion",
+   "relerr": 2.3351470623866684e-14
+  },
+  {
+   "ratio": 10000.0,
+   "kappa_V": 9960.164817993224,
+   "engine": "sqlite",
+   "relerr": 2.7345371839389414e-13
+  },
+  {
+   "ratio": 10000.0,
+   "kappa_V": 9960.164817993224,
+   "engine": "duckdb",
+   "relerr": 2.7345371839389414e-13
+  },
+  {
+   "ratio": 10000.0,
+   "kappa_V": 9960.164817993224,
+   "engine": "postgres",
+   "relerr": 3.581812221231774e-14
+  },
+  {
+   "ratio": 10000.0,
+   "kappa_V": 9960.164817993224,
+   "engine": "mysql",
+   "relerr": 2.7345371839389414e-13
+  },
+  {
+   "ratio": 10000.0,
+   "kappa_V": 9960.164817993224,
+   "engine": "clickhouse",
+   "relerr": 7.37932423790727e-08
+  },
+  {
+   "ratio": 10000.0,
+   "kappa_V": 9960.164817993224,
+   "engine": "questdb",
+   "relerr": 2.7345371839389414e-13
+  },
+  {
+   "ratio": 10000.0,
+   "kappa_V": 9960.164817993224,
+   "engine": "datafusion",
+   "relerr": 2.4459715776753105e-13
+  },
+  {
+   "ratio": 100000.0,
+   "kappa_V": 99515.55588964962,
+   "engine": "sqlite",
+   "relerr": 4.795777260996811e-12
+  },
+  {
+   "ratio": 100000.0,
+   "kappa_V": 99515.55588964962,
+   "engine": "duckdb",
+   "relerr": 4.795777260996811e-12
+  },
+  {
+   "ratio": 100000.0,
+   "kappa_V": 99515.55588964962,
+   "engine": "postgres",
+   "relerr": 4.32541447225618e-12
+  },
+  {
+   "ratio": 100000.0,
+   "kappa_V": 99515.55588964962,
+   "engine": "mysql",
+   "relerr": 4.795777260996811e-12
+  },
+  {
+   "ratio": 100000.0,
+   "kappa_V": 99515.55588964962,
+   "engine": "clickhouse",
+   "relerr": 3.6770452780780204e-05
+  },
+  {
+   "ratio": 100000.0,
+   "kappa_V": 99515.55588964962,
+   "engine": "questdb",
+   "relerr": 4.795777260996811e-12
+  },
+  {
+   "ratio": 100000.0,
+   "kappa_V": 99515.55588964962,
+   "engine": "datafusion",
+   "relerr": 5.5394738255226725e-12
+  },
+  {
+   "ratio": 1000000.0,
+   "kappa_V": 1001746.4856780593,
+   "engine": "sqlite",
+   "relerr": 7.619665424838749e-11
+  },
+  {
+   "ratio": 1000000.0,
+   "kappa_V": 1001746.4856780593,
+   "engine": "duckdb",
+   "relerr": 7.619665424838749e-11
+  },
+  {
+   "ratio": 1000000.0,
+   "kappa_V": 1001746.4856780593,
+   "engine": "postgres",
+   "relerr": 3.054288462611324e-11
+  },
+  {
+   "ratio": 1000000.0,
+   "kappa_V": 1001746.4856780593,
+   "engine": "mysql",
+   "relerr": 7.619665424838749e-11
+  },
+  {
+   "ratio": 1000000.0,
+   "kappa_V": 1001746.4856780593,
+   "engine": "clickhouse",
+   "relerr": 0.003295322363028706
+  },
+  {
+   "ratio": 1000000.0,
+   "kappa_V": 1001746.4856780593,
+   "engine": "questdb",
+   "relerr": 7.619665424838749e-11
+  },
+  {
+   "ratio": 1000000.0,
+   "kappa_V": 1001746.4856780593,
+   "engine": "datafusion",
+   "relerr": 6.89290170924262e-11
+  },
+  {
+   "ratio": 10000000.0,
+   "kappa_V": 9894850.155084707,
+   "engine": "sqlite",
+   "relerr": 3.773424862192475e-10
+  },
+  {
+   "ratio": 10000000.0,
+   "kappa_V": 9894850.155084707,
+   "engine": "duckdb",
+   "relerr": 3.773424862192475e-10
+  },
+  {
+   "ratio": 10000000.0,
+   "kappa_V": 9894850.155084707,
+   "engine": "postgres",
+   "relerr": 1.1649369748778481e-09
+  },
+  {
+   "ratio": 10000000.0,
+   "kappa_V": 9894850.155084707,
+   "engine": "mysql",
+   "relerr": 3.773424862192475e-10
+  },
+  {
+   "ratio": 10000000.0,
+   "kappa_V": 9894850.155084707,
+   "engine": "clickhouse",
+   "relerr": 1.1680760715959217
+  },
+  {
+   "ratio": 10000000.0,
+   "kappa_V": 9894850.155084707,
+   "engine": "questdb",
+   "relerr": 3.773424862192475e-10
+  },
+  {
+   "ratio": 10000000.0,
+   "kappa_V": 9894850.155084707,
+   "engine": "datafusion",
+   "relerr": 4.3105278772910756e-10
+  },
+  {
+   "ratio": 100000000.0,
+   "kappa_V": 99607363.26312761,
+   "engine": "sqlite",
+   "relerr": 2.2819162504057496e-10
+  },
+  {
+   "ratio": 100000000.0,
+   "kappa_V": 99607363.26312761,
+   "engine": "duckdb",
+   "relerr": 2.2819162504057496e-10
+  },
+  {
+   "ratio": 100000000.0,
+   "kappa_V": 99607363.26312761,
+   "engine": "postgres",
+   "relerr": 1.0305834880502336e-09
+  },
+  {
+   "ratio": 100000000.0,
+   "kappa_V": 99607363.26312761,
+   "engine": "mysql",
+   "relerr": 2.2819162504057496e-10
+  },
+  {
+   "ratio": 100000000.0,
+   "kappa_V": 99607363.26312761,
+   "engine": "clickhouse",
+   "relerr": 1.0
+  },
+  {
+   "ratio": 100000000.0,
+   "kappa_V": 99607363.26312761,
+   "engine": "questdb",
+   "relerr": 2.2819162504057496e-10
+  },
+  {
+   "ratio": 100000000.0,
+   "kappa_V": 99607363.26312761,
+   "engine": "datafusion",
+   "relerr": 4.832430070531435e-10
+  },
+  {
+   "ratio": 1000000000.0,
+   "kappa_V": 1002664207.3120049,
+   "engine": "sqlite",
+   "relerr": 6.786587184162194e-09
+  },
+  {
+   "ratio": 1000000000.0,
+   "kappa_V": 1002664207.3120049,
+   "engine": "duckdb",
+   "relerr": 6.786587184162194e-09
+  },
+  {
+   "ratio": 1000000000.0,
+   "kappa_V": 1002664207.3120049,
+   "engine": "postgres",
+   "relerr": 5.10267535424211e-08
+  },
+  {
+   "ratio": 1000000000.0,
+   "kappa_V": 1002664207.3120049,
+   "engine": "mysql",
+   "relerr": 6.786587184162194e-09
+  },
+  {
+   "ratio": 1000000000.0,
+   "kappa_V": 1002664207.3120049,
+   "engine": "clickhouse",
+   "relerr": 12016.545871538854
+  },
+  {
+   "ratio": 1000000000.0,
+   "kappa_V": 1002664207.3120049,
+   "engine": "questdb",
+   "relerr": 6.786587184162194e-09
+  },
+  {
+   "ratio": 1000000000.0,
+   "kappa_V": 1002664207.3120049,
+   "engine": "datafusion",
+   "relerr": 1.2454561163355999e-08
+  }
+ ],
+ "fits": {
+  "clickhouse": {
+   "p": 2.0479170457064746,
+   "n_fit": 6,
+   "algo": "var_onepass",
+   "cls": "columnar OLAP"
+  },
+  "datafusion": {
+   "p": 0.9266757682965003,
+   "n_fit": 8,
+   "algo": "var_welford",
+   "cls": "columnar OLAP (Arrow)"
+  },
+  "duckdb": {
+   "p": 0.8991160139919144,
+   "n_fit": 8,
+   "algo": "var_welford",
+   "cls": "columnar OLAP (Arrow)"
+  },
+  "mysql": {
+   "p": 0.8991160139919144,
+   "n_fit": 8,
+   "algo": "var_welford",
+   "cls": "OLTP row-store"
+  },
+  "postgres": {
+   "p": 1.0547940283146944,
+   "n_fit": 7,
+   "algo": "var_welford",
+   "cls": "OLTP row-store"
+  },
+  "questdb": {
+   "p": 0.8991160139919144,
+   "n_fit": 8,
+   "algo": "var_welford",
+   "cls": "time-series"
+  },
+  "sqlite": {
+   "p": 0.8991160139919144,
+   "n_fit": 8,
+   "algo": "var_welford",
+   "cls": "embedded"
+  }
+ },
+ "caveats": {
+  "monetdb": "excluded: pymonetdb readback not bit-exact (1388/4000 ULP mismatches); transport-verification unresolved, needs hex/binary readback. var_pop looked stable (relerr~6e-9) but cell is void per transport NC."
+ },
+ "summary": "7 engines/4 classes fitted; ClickHouse alone is one-pass (p=2.05); all others incl. time-series QuestDB (0.90) and Arrow DataFusion (0.93) are stable (p<=1.05)."
+}

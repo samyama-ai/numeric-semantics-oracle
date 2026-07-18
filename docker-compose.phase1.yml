@@ -1,0 +1,20 @@
+# Phase-1 engine expansion (exploratory; kept separate from the published artifact compose).
+# Adds a TIME-SERIES engine (QuestDB) and a classic COLUMNAR-OLAP engine (MonetDB) to broaden
+# the p-axis taxonomy. DataFusion (Arrow OLAP) runs in-process via the `datafusion` pip package.
+services:
+  questdb:
+    image: questdb/questdb:8.2.1
+    environment:
+      QDB_PG_USER: admin
+      QDB_PG_PASSWORD: quest
+    ports: ["58812:8812", "59000:9000"]   # 8812 = pg-wire, 9000 = http (health)
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1:9000 || exit 1"]
+      interval: 3s
+      retries: 30
+
+  monetdb:
+    image: monetdb/monetdb:latest
+    environment:
+      MDB_DB_ADMIN_PASS: monetdb
+    ports: ["50000:50000"]
