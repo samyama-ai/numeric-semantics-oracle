@@ -6,5 +6,6 @@
   "subnormal": 12,
   "overflow": 12
  },
- "anomalies": []
+ "anomalies": [],
+ "n_anomalies": 0
 }

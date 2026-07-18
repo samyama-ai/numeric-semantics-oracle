@@ -468,5 +468,8 @@
  "caveats": {
   "monetdb": "excluded: pymonetdb readback not bit-exact (1388/4000 ULP mismatches); transport-verification unresolved, needs hex/binary readback. var_pop looked stable (relerr~6e-9) but cell is void per transport NC."
  },
- "summary": "7 engines/4 classes fitted; ClickHouse alone is one-pass (p=2.05); all others incl. time-series QuestDB (0.90) and Arrow DataFusion (0.93) are stable (p<=1.05)."
+ "summary": "7 engines/4 classes fitted; ClickHouse alone is one-pass (p=2.05); all others incl. time-series QuestDB (0.90) and Arrow DataFusion (0.93) are stable (p<=1.05).",
+ "n_engines": 7,
+ "n_onepass": 1,
+ "clickhouse_var_p": 2.048
 }

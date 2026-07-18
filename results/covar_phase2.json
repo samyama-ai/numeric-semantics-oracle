@@ -123,5 +123,11 @@
     "relerr": 7.296246282420188e-09
    }
   }
- }
+ },
+ "clickhouse_covar_p": 2.015,
+ "ch_covar_relerr": 61.66,
+ "ch_slope_value": -3.6,
+ "ch_slope_relerr": 7.01,
+ "ch_std_value": 0.0,
+ "ch_corr_is_nan": true
 }

@@ -210,3 +210,44 @@ def figv4():
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
     figv1(); figv2(); figv3(); figv4()
+
+
+# ---------- Figure V5: p-axis taxonomy across engine classes (Phase 1+2 expansion) ----------
+CLASS_COLOR = {"columnar OLAP": VERM, "columnar OLAP (Arrow)": BLUE, "OLTP row-store": GREEN,
+               "time-series": ORANGE, "embedded": PURPLE}
+
+def figv5():
+    p1 = json.load(open(os.path.join(RES, "variance_phase1.json")))
+    p2 = json.load(open(os.path.join(RES, "covar_phase2.json")))
+    var_p = {e: f["p"] for e, f in p1["fits"].items()}
+    var_cls = {e: f["cls"] for e, f in p1["fits"].items()}
+    cov_p = {e: f["p"] for e, f in p2["fits"].items()}
+    # order: stable engines by p, ClickHouse (one-pass) at top
+    engs = sorted(var_p, key=lambda e: var_p[e])
+    y = list(range(len(engs)))
+
+    fig, ax = plt.subplots(figsize=(6.6, 3.8))
+    ax.axvspan(1.7, 2.5, color="#fbe9e2", zorder=0)
+    ax.axvline(1.0, color=MUTED, ls="--", lw=1.2); ax.axvline(2.0, color=MUTED, ls="--", lw=1.2)
+    ax.text(1.0, len(engs) - 0.3, " p=1 stable", color=MUTED, fontsize=8, va="top")
+    ax.text(2.0, len(engs) - 0.3, " p=2 one-pass", color=VERM, fontsize=8, va="top")
+    for yi, e in zip(y, engs):
+        c = CLASS_COLOR.get(var_cls[e], INK)
+        ax.plot(var_p[e], yi, "o", ms=11, color=c, mec=INK, mew=0.8, zorder=3)
+        if e in cov_p:
+            ax.plot(cov_p[e], yi, "D", ms=7, color="white", mec=c, mew=1.6, zorder=3)
+        lbl = e + ("" if e in cov_p else "  (no covar)")
+        ax.text(min(var_p[e], cov_p.get(e, 9)) - 0.05, yi, lbl, ha="right", va="center", fontsize=8)
+    ax.set_yticks(y); ax.set_yticklabels([var_cls[e] for e in engs], fontsize=7.5)
+    ax.set_xlim(0.4, 2.4); ax.set_ylim(-0.6, len(engs) - 0.2)
+    ax.set_xlabel("measured error exponent $p$   (circle = variance, diamond = covariance)")
+    ax.set_title("The one-pass choice is a concentrated, engine-level outlier", loc="left", fontsize=9.5)
+    ax.legend(handles=[Patch(color=c, label=k) for k, c in CLASS_COLOR.items()],
+              loc="lower right", fontsize=7, frameon=False, title="engine class", title_fontsize=7.5)
+    ax.grid(True, axis="x", zorder=0)
+    fig.savefig(os.path.join(OUT, "figv5_taxonomy.png"), dpi=220, bbox_inches="tight")
+    print("wrote figv5_taxonomy.png")
+
+
+if __name__ == "__main__":
+    figv5()
